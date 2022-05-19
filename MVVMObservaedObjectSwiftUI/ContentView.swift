@@ -7,10 +7,21 @@
 
 import SwiftUI
 
+let apiUrl = "https://api.letsbuildthatapp.com/static/courses.json"
+
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                Text("Hello Everyone from YOUTUBE")
+            }.navigationBarTitle("Courses")
+                .navigationBarItems(trailing: Button(action: {
+                    print("Fetching json data")
+                }, label: {
+                    Text("Fetch Courses")
+                }))
+        }
     }
 }
 
